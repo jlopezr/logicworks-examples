@@ -15,6 +15,10 @@ architecture arch1 of REG_FILE is
 	signal reg0,reg2,reg4,reg6: std_logic_vector(0 to 31) := to_stdlogicvector(x"12345678");
 	signal reg1,reg3,reg5,reg7: std_logic_vector(0 to 31) := to_stdlogicvector(x"abcdef00");
 begin
+	reg0 <= to_stdlogicvector(x"12345678");
+	reg1 <= to_stdlogicvector(x"abcdef00");
+	reg2 <= to_stdlogicvector(x"12345678");
+	reg3 <= to_stdlogicvector(x"abcdef00");
 	with addr1 select
 		reg_out_1 <= reg0 after 5ns when "000",
 		             reg1 after 5ns when "001",

@@ -1,0 +1,23 @@
+library IEEE;
+use IEEE.std_logic_1164.all;
+
+entity MUX4 is 
+ port(
+		in0	: in	std_logic_vector(0 to 7);
+		in1	: in	std_logic_vector(0 to 7);
+		in2	: in	std_logic_vector(0 to 7);
+		in3	: in	std_logic_vector(0 to 7);
+		s0	: in	std_logic;
+		s1	: in	std_logic;
+		z	: out	std_logic_vector(0 to 7)
+	);
+end MUX4;
+
+architecture arch1 of MUX4 is
+begin
+	z <= in0 after 5ns when s0='0' and s1='0' else
+	     in1 after 5ns when s0='0' and s1='1' else
+	     in2 after 5ns when s0='1' and s1='0' else
+	     in3 after 5ns when s0='1' and s1='1' else
+	     "00000000" after 5ns;
+end arch1;

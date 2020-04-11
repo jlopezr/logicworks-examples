@@ -1,0 +1,1 @@
+(D VH1(A IOPanel.Save @ 100"(S Scripts\IOPanelDefault.html)(P @ 60"C:\Program Files (x86)\LogicWorks 5\Scripts\IOPanel6502.html))(A Timing.Save @ 93"(D(V2)(F(A 1))(D10000)(S(N3"pos))(S(N3"neg))(S(N4"out1))(P30"(P 1(R 0 0 0)(H 0 1 10000000))))))

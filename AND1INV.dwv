@@ -1,0 +1,22 @@
+library IEEE;
+use IEEE.std_logic_1164.all;
+
+
+entity AND1INV is 
+
+ port(
+		POS	: in	std_logic;
+		NEG	: in	std_logic;
+		OUT1	: out	std_logic
+	);
+
+end AND1INV;
+
+
+architecture arch1 of AND1INV is
+
+begin
+  OUT1 <= POS and not NEG after 1ns;
+  
+
+end arch1;
